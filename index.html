@@ -4,84 +4,90 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0b1220">
-  <meta name="description" content="ScamShield GR — έλεγξε ύποπτα μηνύματα και μάθε ποια σημάδια χρειάζονται προσοχή.">
+  <meta name="description" content="ScamShield GR — έλεγξε ύποπτα μηνύματα και συνδέσμους για προειδοποιητικές ενδείξεις.">
   <title>ScamShield GR — Έλεγξε πριν πατήσεις</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="topbar">
+  <header class="topbar">
     <a class="brand" href="#" aria-label="ScamShield GR αρχική">
       <span class="brand-mark">S<span>✓</span></span>
-      <span>ScamShield <b>GR</b><small>Ψηφιακή ψυχραιμία, καλύτερες αποφάσεις.</small></span>
+      <span>ScamShield <b>GR</b><small>Πρώτα έλεγχος. Μετά απόφαση.</small></span>
     </a>
-    <a class="top-link" href="#how">Πώς λειτουργεί <span aria-hidden="true">↗</span></a>
-  </div>
+    <nav><a href="#checker">Έλεγχος</a><a href="#plans">Πλάνα</a><a href="#safety">Ασφάλεια</a></nav>
+  </header>
 
   <main>
     <section class="hero">
       <div class="hero-copy">
-        <div class="eyebrow"><span class="pulse"></span> ΔΩΡΕΑΝ ΕΛΕΓΧΟΣ ΜΗΝΥΜΑΤΩΝ</div>
+        <div class="eyebrow"><span class="pulse"></span> ΕΛΕΓΧΟΣ ΥΠΟΠΤΩΝ ΜΗΝΥΜΑΤΩΝ</div>
         <h1>Έλεγξε πριν<br><span>πατήσεις.</span></h1>
-        <p class="hero-lede">Ένα μήνυμα σε πιέζει να πληρώσεις ή να δώσεις στοιχεία; Έλεγξέ το για ύποπτες ενδείξεις και δες τι αξίζει να προσέξεις.</p>
-        <div class="trust-row">
-          <span><i>✓</i> Χωρίς εγγραφή</span>
-          <span><i>✓</i> Ελληνικά, απλά</span>
-          <span><i>✓</i> Η ανάλυση γίνεται στη συσκευή σου</span>
-        </div>
+        <p class="hero-lede">Έλαβες μήνυμα που σε πιέζει να πληρώσεις, να συνδεθείς ή να δώσεις στοιχεία; Έλεγξέ το για προειδοποιητικές ενδείξεις και μάθε τι να κάνεις μετά.</p>
+        <div class="trust-row"><span><i>✓</i> Χωρίς εγγραφή</span><span><i>✓</i> Ελληνικά, απλά</span><span><i>✓</i> Το κείμενο μένει στον browser σου</span></div>
+        <a class="hero-cta" href="#checker">Έλεγξε ένα μήνυμα <span>↓</span></a>
       </div>
       <div class="hero-visual" aria-hidden="true">
         <div class="orb orb-one"></div><div class="orb orb-two"></div>
         <div class="shield-illustration"><div class="shield-inner">✓</div></div>
         <div class="float-card card-safe"><span class="mini-icon green">✓</span><span><b>Σκέψου πριν δράσεις</b><small>Έλεγξε από επίσημη πηγή</small></span></div>
-        <div class="float-card card-alert"><span class="mini-icon amber">!</span><span><b>Πίεση για άμεση πληρωμή;</b><small>Πιθανή ένδειξη κινδύνου</small></span></div>
+        <div class="float-card card-alert"><span class="mini-icon amber">!</span><span><b>Πίεση για άμεση πληρωμή;</b><small>Μπορεί να είναι ένδειξη κινδύνου</small></span></div>
       </div>
     </section>
 
     <section class="checker panel" id="checker">
       <div class="section-heading">
         <div><div class="step-label">01 / ΕΛΕΓΧΟΣ</div><h2>Τι μήνυμα έλαβες;</h2></div>
-        <span class="privacy-pill"><span class="lock">⌑</span> Το κείμενο δεν αποστέλλεται από αυτή τη σελίδα</span>
+        <span class="privacy-pill">⌑ Η ανάλυση γίνεται τοπικά</span>
       </div>
-      <p class="muted">Κάνε επικόλληση το κείμενο που θέλεις να ελέγξεις. Αφαίρεσε πρώτα ονόματα, τηλέφωνα, κωδικούς και άλλα προσωπικά στοιχεία.</p>
-      <label class="sr-only" for="message">Κείμενο μηνύματος</label>
-      <textarea id="message" maxlength="8000" placeholder="π.χ. Το δέμα σας έχει κρατηθεί. Πληρώστε 1,99€ στον παρακάτω σύνδεσμο για να ολοκληρωθεί η παράδοση..." spellcheck="false"></textarea>
-      <div class="input-footer"><span id="char-count">0 / 8000 χαρακτήρες</span><button id="clear-btn" class="text-button" type="button">Καθαρισμός</button></div>
-      <div class="actions">
-        <button id="analyze-btn" class="primary-btn" type="button"><span>Έλεγχος μηνύματος</span><span aria-hidden="true">→</span></button>
-        <span class="fineprint">Δεν είναι antivirus ούτε εγγύηση ασφάλειας.</span>
-      </div>
+      <p class="muted">Επικόλλησε το κείμενο ή έναν σύνδεσμο. Αφαίρεσε πρώτα ονόματα, τηλέφωνα, κωδικούς και άλλα προσωπικά στοιχεία.</p>
+      <label class="sr-only" for="message">Κείμενο μηνύματος ή σύνδεσμος</label>
+      <textarea id="message" maxlength="10000" placeholder="π.χ. Το δέμα σας έχει κρατηθεί. Πληρώστε 1,99€ εδώ: https://..." spellcheck="false"></textarea>
+      <div class="input-footer"><span id="char-count">0 / 10000 χαρακτήρες</span><button id="clear-btn" class="text-button" type="button">Καθαρισμός</button></div>
+      <div class="actions"><button id="analyze-btn" class="primary-btn" type="button"><span>Έλεγχος μηνύματος</span><span>→</span></button><span class="fineprint">Δεν είναι antivirus ούτε εγγύηση ασφάλειας.</span></div>
       <div id="result" class="result hidden" aria-live="polite"></div>
-      <div id="examples" class="examples">
-        <span class="examples-title">Δοκίμασε ένα παράδειγμα</span>
+      <div class="examples"><span class="examples-title">Δοκίμασε ένα παράδειγμα</span>
         <button type="button" class="example-chip" data-example="parcel">📦 Ψεύτικο δέμα</button>
         <button type="button" class="example-chip" data-example="bank">🏦 Τραπεζικό μήνυμα</button>
         <button type="button" class="example-chip" data-example="prize">🎁 Υποτιθέμενο δώρο</button>
+        <button type="button" class="example-chip" data-example="link">🔗 Παράξενος σύνδεσμος</button>
         <button type="button" class="example-chip" data-example="normal">💬 Συνηθισμένο μήνυμα</button>
       </div>
     </section>
 
-    <section class="how-section" id="how">
-      <div class="section-heading"><div><div class="step-label">02 / ΤΙ ΚΟΙΤΑΜΕ</div><h2>Σημάδια που αξίζει να προσέξεις</h2></div></div>
+    <section class="how-section">
+      <div class="section-heading"><div><div class="step-label">02 / ΤΙ ΕΛΕΓΧΟΥΜΕ</div><h2>Ενδείξεις, όχι βεβαιότητες</h2></div></div>
       <div class="feature-grid">
-        <article class="feature-card"><div class="feature-icon violet">↗</div><h3>Ύποπτοι σύνδεσμοι</h3><p>Παράξενες διευθύνσεις, συντομευμένα links ή domains που δεν ταιριάζουν με τον οργανισμό.</p></article>
-        <article class="feature-card"><div class="feature-icon amber">!</div><h3>Επείγουσα απειλή</h3><p>Πίεση να δράσεις αμέσως, αλλιώς δήθεν θα κλειδώσει λογαριασμός ή θα χαθεί δέμα.</p></article>
-        <article class="feature-card"><div class="feature-icon blue">€</div><h3>Αίτημα πληρωμής</h3><p>Μικρές χρεώσεις, «τέλη» ή αιτήματα μεταφοράς χρημάτων που δεν περίμενες.</p></article>
-        <article class="feature-card"><div class="feature-icon green">⌁</div><h3>Προσωπικά στοιχεία</h3><p>Αιτήματα για κωδικούς, στοιχεία κάρτας, PIN ή κωδικούς μιας χρήσης είναι σοβαρό προειδοποιητικό σημάδι.</p></article>
+        <article class="feature-card"><div class="feature-icon violet">↗</div><h3>Σύνδεσμοι</h3><p>Εξετάζουμε μοτίβα όπως συντομευμένα links, διευθύνσεις IP και domains που μοιάζουν ύποπτα.</p></article>
+        <article class="feature-card"><div class="feature-icon amber">!</div><h3>Πίεση και απειλές</h3><p>Εντοπίζουμε λέξεις που προσπαθούν να σε κάνουν να δράσεις αμέσως.</p></article>
+        <article class="feature-card"><div class="feature-icon blue">€</div><h3>Πληρωμές και δώρα</h3><p>Ελέγχουμε απρόσμενα τέλη, μεταφορές χρημάτων και υποσχέσεις βραβείων.</p></article>
+        <article class="feature-card"><div class="feature-icon green">⌁</div><h3>Κωδικοί και στοιχεία</h3><p>Επισημαίνουμε αιτήματα για PIN, στοιχεία κάρτας ή κωδικούς μιας χρήσης.</p></article>
+      </div>
+    </section>
+
+    <section class="plans-section" id="plans">
+      <div class="section-heading"><div><div class="step-label">03 / ΠΛΑΝΑ</div><h2>Ασφάλεια με απλά βήματα</h2><p class="muted">Οι συνδρομές είναι υπό σχεδιασμό. Δεν πραγματοποιούνται πληρωμές σε αυτή την έκδοση.</p></div></div>
+      <div class="plans-grid">
+        <article class="plan-card">
+          <div class="plan-label">ΓΙΑ ΟΛΟΥΣ</div><h3>Free</h3><p class="plan-price">0€ <small>/ για πάντα</small></p>
+          <ul><li>Βασικός έλεγχος μηνυμάτων</li><li>Επεξήγηση ενδείξεων</li><li>Οδηγίες ασφαλών ενεργειών</li></ul>
+          <a class="plan-button secondary" href="#checker">Δοκίμασέ το</a>
+        </article>
+        <article class="plan-card featured">
+          <div class="plan-badge">ΥΠΟ ΣΧΕΔΙΑΣΜΟ</div><div class="plan-label">ΠΕΡΙΣΣΟΤΕΡΑ ΕΡΓΑΛΕΙΑ</div><h3>Plus</h3><p class="plan-price">2,99€ <small>/ μήνα · προτεινόμενη τιμή</small></p>
+          <ul><li>Πιο αναλυτικές αναφορές</li><li>Προαιρετικό ιστορικό ελέγχων</li><li>Οδηγοί και ενημερώσεις</li></ul>
+          <button class="plan-button primary" id="notify-btn" type="button">Με ενδιαφέρει</button>
+          <p class="plan-note" id="notify-note" aria-live="polite">Δεν ζητάμε email σε αυτή την έκδοση.</p>
+        </article>
       </div>
     </section>
 
     <section class="safety panel" id="safety">
-      <div class="safety-symbol">盾</div>
-      <div><div class="step-label">03 / ΑΣΦΑΛΕΙΑ</div><h2>Αν δεν είσαι σίγουρος, σταμάτα.</h2><p>Μην πατήσεις τον σύνδεσμο και μην απαντήσεις. Άνοιξε μόνος σου την επίσημη εφαρμογή ή πληκτρολόγησε τη γνωστή διεύθυνση του οργανισμού. Μην κοινοποιείς ποτέ κωδικούς ή PIN.</p><a href="https://www.gov.gr/" target="_blank" rel="noopener noreferrer">Επίσημη πύλη gov.gr ↗</a></div>
+      <div class="safety-symbol">盾</div><div><div class="step-label">04 / ΑΣΦΑΛΕΙΑ</div><h2>Αν δεν είσαι σίγουρος, σταμάτα.</h2><p>Μην πατήσεις τον σύνδεσμο και μην απαντήσεις. Άνοιξε μόνος σου την επίσημη εφαρμογή ή πληκτρολόγησε τη γνωστή διεύθυνση του οργανισμού. Μην κοινοποιείς ποτέ κωδικούς ή PIN.</p><a href="https://cyber.gov.gr/" target="_blank" rel="noopener noreferrer">Εθνική Αρχή Κυβερνοασφάλειας ↗</a></div>
     </section>
 
-    <section class="disclaimer">
-      <span class="disclaimer-icon">i</span>
-      <div><b>Σημαντικό να γνωρίζεις</b><p>Το ScamShield GR είναι ένα αρχικό εργαλείο βασισμένο σε απλούς κανόνες. Μπορεί να χάσει μια απάτη ή να επισημάνει ένα αθώο μήνυμα. Το αποτέλεσμα δεν επιβεβαιώνει αν ένα μήνυμα ή link είναι ασφαλές. Μην εισάγεις ευαίσθητα δεδομένα και επιβεβαίωσε κάθε σημαντικό αίτημα από ανεξάρτητο, επίσημο κανάλι.</p></div>
-    </section>
+    <section class="disclaimer"><span class="disclaimer-icon">i</span><div><b>Σημαντικοί περιορισμοί</b><p>Το ScamShield GR είναι πειραματικό εργαλείο βασισμένο σε απλούς κανόνες. Δεν ελέγχει ζωντανά τη φήμη ιστοσελίδων και μπορεί να χάσει απάτες ή να επισημάνει αθώα μηνύματα. Ακόμη και μήνυμα χωρίς ενδείξεις μπορεί να είναι επικίνδυνο. Επιβεβαίωσε σημαντικά αιτήματα από ανεξάρτητο, επίσημο κανάλι.</p></div></section>
   </main>
-
-  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">S<span>✓</span></span><span>ScamShield <b>GR</b><small>Πρώτα έλεγχος. Μετά απόφαση.</small></span></a><span>Πειραματικό MVP · Έκδοση 0.1</span></footer>
+  <footer><a class="brand footer-brand" href="#"><span class="brand-mark">S<span>✓</span></span><span>ScamShield <b>GR</b><small>Πρώτα έλεγχος. Μετά απόφαση.</small></span></a><span>MVP 0.2 · Δωρεάν demo</span></footer>
   <script src="script.js"></script>
 </body>
 </html>
